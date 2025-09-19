@@ -139,7 +139,11 @@ def move():
                 vector(0, -5),
             ]
             """
-            Determinar la direccion en que los fantasmas se acercan mas a pacman
+            El siguiente codigo es para determinar cual es la 
+            direccion en que los fantasmas se acercan mas a pacman. 
+            Se verifica que sea una direccion valida y despues calcula 
+            la distancia entre el fantasma y pacman si el fantasma se 
+            mueve en determinada direccion. 
             """
             distance = 10000000
             election = options[0]
