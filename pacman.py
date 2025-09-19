@@ -19,7 +19,7 @@ path = Turtle(visible=False)
 writer = Turtle(visible=False)
 aim = vector(5, 0)
 pacman = vector(-40, -80)
-ghosts = [
+ghosts = [ #Aumenta la velocidad de los fantasmas de 5 a 10
     [vector(-180, 160), vector(10, 0)],
     [vector(-180, -160), vector(0, 10)],
     [vector(100, 160), vector(0, -10)],
@@ -47,7 +47,7 @@ tiles = [
     0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,
     0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-]
+] #Se cambió la cuadrícula a una más abierta
 
 def square(x, y):
     """Draw square using path at (x, y)."""
