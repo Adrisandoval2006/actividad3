@@ -135,12 +135,27 @@ def move():
             point.move(course)
         else:
             options = [
-                vector(5, 0),
-                vector(-5, 0),
                 vector(0, 5),
+                vector(-5, 0),
+                vector(5, 0),
                 vector(0, -5),
             ]
-            plan = choice(options)
+            """
+            Determinar la direccion en que los fantasmas se acercan mas a pacman
+            """
+            distance = 10000000
+            election = options[0]
+            for option in options:
+                if valid(point + option):
+                   tempDistance = (point.x + option.x-pacman.x)**2 + (point.y+option.y - pacman.y)**2
+                   if tempDistance < distance:
+                    distance = tempDistance
+                    election.x = option.x
+                    election.y = option.y
+
+            plan = election
+            plan.x = election.x
+            plan.y = election.y
             course.x = plan.x
             course.y = plan.y
 
